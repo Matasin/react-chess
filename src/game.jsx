@@ -67,7 +67,6 @@ export default class Game extends Component {
                 });
                 return;
             }
-
             if (isMovePossible && isMoveLegal) {
                 if (squares[i] !== null) {
                     if (squares[i].player === 1) {
@@ -120,7 +119,7 @@ export default class Game extends Component {
 
     render() {
         const { status, squares, turn, whiteKilled, blackKilled } = this.state;
-
+        console.log(whiteKilled);
         return (
             <div className="game">
                 <Info

@@ -50,6 +50,7 @@ body {
         }
         &.--black {
             right: 0;
+            flex-direction: row-reverse;
         }
     }
 }

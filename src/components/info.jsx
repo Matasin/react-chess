@@ -16,12 +16,13 @@ const Info = ({ status, turn, whiteKilled, blackKilled }) => {
             <h2 className="status">{status}</h2>
 
             <div className="killed-pieces --white">
-                {whiteKilled.map((index, { style }) => {
+                {whiteKilled.map(({ style }, index) => {
+                    console.log(style);
                     return <Square key={index} style={style} />;
                 })}
             </div>
             <div className="killed-pieces  --black">
-                {blackKilled.map((index, { style }) => {
+                {blackKilled.map(({ style }, index) => {
                     return <Square key={index} style={style} />;
                 })}
             </div>
