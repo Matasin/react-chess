@@ -119,7 +119,6 @@ export default class Game extends Component {
 
     render() {
         const { status, squares, turn, whiteKilled, blackKilled } = this.state;
-        console.log(whiteKilled);
         return (
             <div className="game">
                 <Info
