@@ -21,6 +21,20 @@ export default class Game extends Component {
     handleClick = (i) => {
         const squares = this.state.squares.slice();
 
+        if (this.state.sourceSelection) {
+            squares[this.state.sourceSelection].style = {
+                ...squares[this.state.sourceSelection].style,
+                backgroundColor: "",
+            };
+            if (squares[i] && squares[i].player === this.state.player) {
+                this.setState({
+                    status:
+                        "Wrong selection. Choose valid source and destination again.",
+                    sourceSelection: false,
+                });
+            }
+        }
+
         if (!this.state.sourceSelection) {
             // check empty square
             if (!squares[i]) {
